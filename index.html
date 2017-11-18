@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<style type="text/css">
+div, span, p {
+  width: 140px;
+  height: 140px;
+  margin: 5px;
+  background: #aaa;
+  border: #000 1px solid;
+  float: left;
+  font-size: 17px;
+  font-family: Verdana;
+}
+div.mini {
+  width: 55px;
+  height: 55px;
+  background-color: #aaa;
+  font-size: 12px;
+}
+div.hide {
+  display: none;
+}
+</style>
+<script src="js/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(function(){
+    //基本选择器
+    //$("#one").css("background","red");
+    //$(".mini").css("background","red");
+    //$("div").css("background","red");
+    //$("*").css("background","red");
+    //$("#one,#two").css("background","red");   
+    //$("p").css("background","red");
+
+    //层次选择器
+   // $("#one div").css("background","red");//选择id为one的元素内所有的div元素
+    //$("#one>div").css("background","red");//选择id为one下元素名是div的子元素 ，和上面类似
+    // $("#one+div").css("background","red");//选择id为one的下一个div元素
+   // $("#one~div").css("background","red");//选择id为one的元素后面的所有兄弟div元素
+     
+    //过滤选择器
+    // $(".mini:first").css("background","red");//选择第一个class为.mini的元素
+   //$(".mini:last").css("background","red");//选择最后一个class为.mini的元素
+    //$("div:not(.mini)").css("background","red");//选择class不为.mini的div元素
+    //$(".mini:odd").css("background","red");//选择索引是奇数且class名为mini的元素
+    //$(".mini:even").css("background","red");//选择索引是偶数且class名为mini的元素
+   // $(".mini:eq(1)").css("background","red");   //选择索引是1且class名为mini的元素
+   // $(".mini:gt(3)").css("background","red");   //选择索引大于3且class名为mini的元素
+   // $(".mini:lt(3)").css("background","red");    //选择索引小于3且class名为mini的元素
+    //$(":header").css("background","red");   //选择页面所有的h1,h2,h3元素
+    //$(":animated").css("background","red");  ///////////////////////////////////////////////// 
+    
+    //内容过滤选择器
+    //$("div:contains(test)").css("background","red");   //选择文本内容有test字段的div元素
+   //$("div:empty").css("background","red");   //选择文本内容为空的div元素 or 不包含子元素
+    //$("div:has(.mini)").css("background","red");   //选择含有类名为.mini的父div元素
+   // $("div:parent").css("background","red");   //选择含有子元素（包括文本元素）的<div>元素
+   
+    //可见性过滤选择器
+   // $("div:hidden").show(2000);  ///显示所有不可见的div元素 
+  //$("div:visible").css("background","red");   //选择所有可见的div元素
+    
+    //属性过滤选择器
+    //$("div[id]").css("background","red");   //选择有id属性的div元素
+    //$("div[id=one]").css("background","red");   //选择id属性=one的div元素
+    //$("div[class!=mini]").css("background","red");   //选择类名不为mini的div元素
+    //$("div[id^=o]").css("background","red");  //选择id名以o开头的div元素
+   // $("div[id$=o]").css("background","red");//选择id名以o结束的div元素 
+    //$("div[class*=i]").css("background","red"); //选择class属性名含有i的div元素
+   // $("div[id][title$=st]").css("background","red");  //选择有属性id并且属性title值以st结束的div元素
+      
+
+  });
+</script>
+</head>
+<body>
+<div class="one" id="one">
+  id为one，class为one的div
+  <div class="mini">class为mini </div>
+
+
+</div>
+<div class="one" id="two" title="test">
+  id为two，class为one，title为test的div
+  <div class="mini" title="other">class为mini，title为other</div>
+  <div class="mini" title="test">class为mini，title为test</div>
+</div>
+<div class="one">
+  <div class="mini">class为mini</div>
+  <div class="mini">class为mini</div>
+  <div class="mini">class为mini</div>
+  <div class="mini"></div>
+</div>
+<div class="one">
+  <div class="mini">class为mini</div>
+  <div class="mini">class为mini</div>
+  <div class="mini">class为mini</div>
+  <div class="mini" title="tesst">class为mini，title为tesst</div>
+</div>
+<div style="display: none;" class="one">style的display为none的div</div>
+<div class="hide">class为hide的div</div>
+<div>包含input的type为hidden的div<input type="hidden" size="8"/></div>
+<span id="mover">正在执行动画的元素</span>
+
+<h1>aaa</h1>
+<h2>bbb</h2>
+</body>
+</html>
