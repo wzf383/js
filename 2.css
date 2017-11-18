@@ -1,0 +1,47 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+#div1{
+	width: 500px;
+	height: 250px;
+	border: 0px solid red;
+	margin: 0px auto;
+	position: relative;
+	overflow: hidden;
+
+}
+#div2{
+		width: 2000px;
+	height: 250px;
+		
+}
+#div2 ul li{
+	list-style: none;
+	float: left;
+}
+#div2 ul li img{
+	width: 500px;
+	height: 250px;
+}
+#div3 ul li{
+	list-style: none;
+	float: left;
+	margin-left: 20px;
+}
+#div3 ul li img{
+	width: 80px;
+	height: 50px;
+	border: solid 0px green;
+}
+#div3{
+	position: absolute;
+	left: 20px;
+	bottom: 20px;
+}
+#div3 ul li img:hover{
+	width: 80px;
+	height: 50px;
+	border: solid 2px white;
+}
