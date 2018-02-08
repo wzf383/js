@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style type="text/css">
+	
+   body{
+   	behavior:url(csshover.htc);
+   }
+
+	.ha{
+		
+		font-size: 12px;
+		font-weight: bold;
+		list-style: none;
+		
+		
+	}
+	  /*  #k{
+	         height: 40px;
+	  		width: 350px;
+	  		border: solid 5px red;
+	  	} */
+	.ha li {float: left;
+		margin-right: 1px
+
+
+	}
+	.ha li a{
+		line-height: 20px;
+		text-decoration: none;
+		background: #DDD;
+		color: #666666;
+		display: block;
+		width: 80px;
+		text-align: center;
+	}
+	.ha li ul{
+		 display: none; 
+		list-style: none;
+		position: relative;
+		padding:0px;
+	}
+	.ha li:hover ul{
+		display: block;
+        width: 80px;
+        padding:0px;
+      /*   padding-left: 0px; */
+
+/*或者padding=0 F12得知*/
+
+
+
+        /*  position: absolute ;top:32px; left: 170px; */
+	}
+	/* .ha li:hover ul li{
+		padding-top: 8px;
+	} */
+	.ha li:hover ul li ul{
+		display: none;
+	}
+	  .ha li ul li:hover ul{
+	   display: block;
+	  position: absolute;top:0px;left: 80px;
+	 	}  
+	/* .ll:hover ul{
+	   display: block;
+	   position: absolute;top:0px;left: 79px;
+	} */
+         .ha a:hover{
+         	background-color: red;
+         	color: white;
+         }
+</style>
+</head>
+<body>
+    
+    <ul class="ha">
+    	 
+      <li><a href="#">首页</a></li>
+      <li><a href="#">课程大厅</a></li>
+      <li><a href="#">学习中心</a>
+         
+         <ul>
+      <li class="ll"><a href="#">前端课程+</a>
+         <ul>
+         	
+      <li><a href="#">javascript</a></li>
+      <li><a href="#">css</a></li>
+      <li><a href="#">jQuery</a></li>		
+
+
+         </ul>
+
+      </li>
+      <li><a href="#">手机开发</a></li>
+      <li><a href="#">后台编程</a></li>
+         </ul>
+
+
+
+
+      </li>
+      <li><a href="#">关于我们</a></li>
+
+
+
+    </ul>
+</body>
+</html>
